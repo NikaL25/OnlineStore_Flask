@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+</head>
+<body>
+    <h1>Thank you for your purchase!</h1>
+    <h3>Order ID: {{ transaction.id }}</h3>
+    <p>Transaction Status: {{ transaction.status }}</p>
+
+    <h4>Purchased Items</h4>
+    <ul>
+        {% for item in transaction.purchase_units[0].items %}
+            <li>{{ item.name }} - {{ item.quantity }} x {{ item.unit_amount.value }} {{ item.unit_amount.currency_code }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Total: {{ transaction.purchase_units[0].amount.value }} {{ transaction.purchase_units[0].amount.currency_code }}</h4>
+</body>
+</html>

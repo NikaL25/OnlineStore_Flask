@@ -1,0 +1,166 @@
+/* Основные стили для кнопок */
+.d-flex .btn {
+    background: #00bcd4; /* Ярко-голубой цвет */
+    border: 2px solid #00bcd4;
+    border-radius: 12px; /* Увеличил радиус для более мягких углов */
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+.d-flex .btn:hover {
+    background: #039be5; /* Немного темнее голубой для hover */
+    border: 2px solid #039be5;
+}
+
+/* Стили для hover на элементах в правом меню */
+#right1 a:hover {
+    color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+/* Стили для изображения справа */
+.row .right2 {
+    margin-left: -10px;
+    height: 180px;
+    width: 180px;
+    border-radius: 15px; /* Более плавный радиус */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Легкая тень для эффекта */
+}
+
+/* Стили для ссылок внутри колонок */
+.container .row .col .row .col a {
+    background-color: #00bcd4;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.container .row .col .row .col a:hover {
+    background-color: #039be5;
+}
+
+/* Стили для hover на блоках в колонке */
+#column .col:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+/* Стили для товара */
+#items .col:hover {
+    color: #00bcd4;
+    transition: color 0.2s ease;
+}
+
+/* Округленные углы и тень для карточек товаров */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* General layout and background styles */
+.base {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.base-content {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form h3 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+.first {
+    border-top: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group h4 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Submit Button and Other Links */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons input:hover {
+    background-color: #0056b3;
+}
+
+.buttons hr {
+    width: 100%;
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.buttons p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.buttons a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buttons a:hover {
+    text-decoration: underline;
+}

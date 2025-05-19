@@ -1,0 +1,86 @@
+/* Основной стиль body с фоновой картинкой */
+body {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Центрирование формы */
+.base .base-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Темно-серый текст для контраста */
+}
+
+/* Форма с улучшенным стилем */
+.base .base-content .form {
+    height: 520px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с легкой прозрачностью */
+    border: 1px solid #ffcc80; /* Кремовая граница */
+    border-radius: 20px; /* Большие скругленные углы */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Заголовок формы */
+.base .base-content .form h3 {
+    color: #00bcd4; /* Ярко-голубой для заголовка */
+    font-family: 'Cursive', sans-serif;
+    font-size: 36px;
+}
+
+/* Разделитель между полями формы */
+.base .base-content .form hr {
+    width: 88%;
+    margin-top: 30px;
+    background-color: #00bcd4;
+    border: none;
+    height: 2px;
+}
+
+/* Поля ввода */
+.base .base-content .form input {
+    background: none;
+    border: 1px solid #00bcd4; /* Голубая рамка */
+    outline: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 15px;
+    width: 90%;
+    border-radius: 8px;
+}
+
+/* Стили для кнопок и ссылок */
+.base .base-content .form .buttons input,
+.base .base-content .form .buttons a {
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 12px 25px;
+    background: #00bcd4;
+    border: 2px solid #00bcd4;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.base .base-content .form .buttons input:hover,
+.base .base-content .form .buttons a:hover {
+    background: transparent;
+    border: 2px solid #00bcd4;
+    color: #00bcd4;
+}
+
+/* Заголовок и текст в форме */
+.base .base-content .email,
+.base .base-content .password,
+.base .base-content .name {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Times New Roman', serif;
+    margin-top: 10px;
+}

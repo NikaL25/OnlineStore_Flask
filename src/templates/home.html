@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <!-- Left sidebar menu -->
+
+
+        <!-- Main center banner -->
+        <div class="col-md-12">
+         <a href="{{ url_for('views.home') }}">
+    <img src="https://www.shutterstock.com/shutterstock/photos/1841495716/display_1500/stock-vector-great-discount-sale-banner-design-in-d-illustration-on-blue-background-sale-word-balloon-on-1841495716.jpg"
+         alt="Center Image"
+         class="img-fluid rounded"
+         style="width: 100%; height: auto; max-height: 400px; object-fit: cover;">
+</a>
+        </div>
+
+        <!-- Right sidebar information -->
+    </div>
+
+    <!-- Banner section for promotions -->
+
+    <!-- Product cards -->
+<div class="container py-4" style="background-color: #F4F4F4;">
+
+    <!-- Admin Add Product Button (Only visible for admin) -->
+    {% if current_user.is_authenticated and current_user.id == 1 %}
+    <div class="text-center mb-4">
+        <a href="{{ url_for('admin.add_shop_items') }}" class="btn btn-success btn-lg fw-bold shadow">
+            <i class="fas fa-plus-circle"></i> Add Product
+        </a>
+    </div>
+    {% endif %}
+
+    <!-- Product Cards -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for item in items %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 bg-white">
+
+                <!-- Product Image -->
+                <img src="{{ item.product_picture }}" alt="{{ item.product_name }}" class="card-img-top" style="height: 202px; width: 180px; object-fit: cover; border-radius: 10px;">
+
+                <div class="card-body text-center">
+                    <!-- Product Name -->
+                    <h6 class="card-title text-muted">{{ item.product_name }}</h6>
+
+                    <!-- Product Pricing -->
+                    <div class="mt-2">
+                        <h5 class="fw-bold text-primary">GEL {{ item.current_price }}</h5>
+                        <strike><p class="text-muted">GEL {{ item.previous_price }}</p></strike>
+                    </div>
+                                    {% if current_user.is_authenticated and current_user.id != 1 %}
+                <a href="/add-to-cart/{{ item.id }}" class="btn btn-primary btn-sm">Add to Cart</a>
+
+                                    {% endif %}
+
+                </div>
+
+                <!-- Stock Information -->
+                <div class="card-footer text-center">
+                    <p>{{ item.in_stock }} Items Left</p>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

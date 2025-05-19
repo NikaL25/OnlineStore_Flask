@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Shop Items {% endblock %}
+
+
+{% block body %}
+
+<table class="table table-hover table-striped table-responsive shadow-lg rounded-3">
+    <thead class="bg-gradient text-white">
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Previous Price</th>
+            <th scope="col">Current Price</th>
+            <th scope="col">In Stock</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Flash Sale</th>
+            <th scope="col">Add</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr class="align-middle">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+
+                <td>
+                    {{ form.product_name(class="form-control form-control-lg rounded-3 mb-2") }}
+                </td>
+                <td>
+                    {{ form.previous_price(class="form-control form-control-lg rounded-3 mb-2") }}
+                </td>
+                <td>
+                    {{ form.current_price(class="form-control form-control-lg rounded-3 mb-2") }}
+                </td>
+                <td>
+                    {{ form.in_stock(class="form-control form-control-lg rounded-3 mb-2") }}
+                </td>
+                <td>
+                    {{ form.product_picture(class="form-control-file mb-2") }}
+                </td>
+                <td class="text-center">
+                    <div class="form-check form-switch">
+                        {{ form.flash_sale(class="form-check-input") }}
+                        <label class="form-check-label" for="flash_sale">Flash Sale</label>
+                    </div>
+                </td>
+                <td class="text-center">
+                    <button type="submit" class="btn btn-success btn-lg px-4 shadow-lg hover-shadow-lg">
+                        <i class="fas fa-plus-circle"></i> Add Product
+                    </button>
+                </td>
+            </form>
+        </tr>
+    </tbody>
+</table>
+
+
+
+{% endblock %}
